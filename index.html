@@ -97,8 +97,6 @@
    })
    sbmt.addEventListener('click',()=>{
     aud1.src= "https://assets.mixkit.co/sfx/preview/mixkit-female-says-thank-you-380.mp3"
-   div1.innerText="arif has total votes= "+cv
-   div2.innerText="irshad has total votes="+dv
    if(dv>=cv){
     screen2.style.backgroundColor="red"
     div2.style.color="red"
@@ -111,6 +109,16 @@
     screen2.style.backgroundColor="white"
     div1.style.color="red"
     }
+    if(cv>dv){
+      div1.innerText=`arif wone by ${cv-dv} votes`
+    }
+    else if(cv==dv){
+      div1.innerText="both condidate have got equal n0. of votes"
+    }
+    else{
+      div1.innerText=`irshad wone by ${dv-cv} votes`
+    }
+
     // document.write("likers are winner")
    })
  
